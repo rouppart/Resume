@@ -22,7 +22,7 @@
 
     @media screen {
       body {
-        @apply bg-green-100;
+        @apply bg-teal-100;
       }
     }
   }

@@ -1,12 +1,7 @@
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: ['./public/index.html', './src/**/*.svelte']
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ['./public/index.html', './src/**/*.svelte'],
   theme: {
     extend: {
-      screens: {'print': {'raw': 'print'}}
     },
   },
   plugins: [],

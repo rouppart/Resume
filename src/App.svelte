@@ -3,33 +3,6 @@
 	import Posting from './components/Posting.svelte';
 </script>
 
-<style lang="postcss">
-	main {
-		width: 67rem;
-		display: grid;
-		grid-template-columns: 1fr 1fr .8fr;
-		font-family: Inter, sans-serif;
-	}
-
-	@media screen {
-		main {
-			@apply shadow-xl;
-		}
-	}
-
-	.section {
-		@apply flex justify-center;
-	}
-
-	.section span {
-		@apply inline-block bg-green-300 rounded text-white text-xl font-bold p-2 py-1 mt-2;
-	}
-
-	i {
-		@apply font-bold text-gray-600;
-	}
-</style>
-
 <Tailwind />
 
 <main class="bg-white mx-auto">
@@ -66,7 +39,7 @@
 				</li>
 				<li>
 					Currently writing a new ERP from scratch based on a Microservice architecture using <i>Svelte</i> and <i>Tailwind</i> for the frontend,
-					and <i>GraphQL</i> implemented with <i>Starlette</i> in <i>Python</i> for the backend with <i>Postgres</i> as a database and <i>SQLAlchemy</i> as an ORM.
+					and <i>GraphQL</i> implemented with <i>Starlette</i> in <i>Python</i> for the backend with <i>Postgresql</i> as a database and <i>SQLAlchemy</i> as an ORM.
 					Every pair of frontend/backend represents a department.
 				</li>
 				<li>
@@ -96,7 +69,7 @@
 			<ul>
 				<li>
 					Built an Extract-Load-Transform data pipeline having a FnB POS system (Revel) as source, <i>Python</i> for API access,
-					<i>Postgres</i> for storage, and <i>DBT</i> for in-database transformations. All hosted on <i>GCP</i>
+					<i>Postgresql</i> for storage, and <i>DBT</i> for in-database transformations. All hosted on <i>GCP</i>
 				</li>
 				<li>
 					Created around 15 dashboards in Chartio.com for exploration and reporting purposes, served to both managers and employees.
@@ -134,11 +107,23 @@
 			</ul>
 		</Posting>
 
+		<Posting organization="Minteshreen" url="minteshreenelections.com" startDate="2021-12" endDate="2022-02">
+			<ul>
+				<li>
+					Built an electoral campaign canvasing website to keep track of voter engagement and volunteer interactions.
+				</li>
+				<li>
+					Backend uses <i>FastAPI</i> + <i>Postgresql</i> with <i>Celery</i> for background processes and <i>FastAPI-Mail</i> for volunteer registration and password management.
+					Frontend uses <i>Svelte</i>, <i>Typescript</i> and <i>TailwindCSS</i>.
+				</li>
+			</ul>
+		</Posting>
+
 		<Posting organization="Energy Monitor" url="energy.saadtrad.com" startDate="2021-07">
 			<ul>
 				<li>
 					Built an IOT platform, to report the energy consumption of each department.
-					The information flows from power meters to an <i>ESP8266</i> microcontroller, to a <i>Python</i> service that stores the information in a <i>Postgres</i> database.
+					The information flows from power meters to an <i>ESP8266</i> microcontroller, to a <i>Python</i> service that stores the information in a <i>Postgresql</i> database.
 				</li>
 				<li>
 					Also built a live monitoring dashboard using <i>Svelte</i>, <i>Tailwind</i> and <i>Python (Starlette)</i>.
@@ -152,7 +137,7 @@
 			Unfortunately the program was canceled before the regional contest.
 		</Posting>
 
-<!--		<div class="border-2 border-green-300 rounded text-center py-1">Other Projects can be found on <a href="https://github.com/rouppart">Github</a></div>-->
+<!--		<div class="border-2 border-teal-600 rounded text-center py-1">Other Projects can be found on <a href="https://github.com/rouppart">Github</a></div>-->
 
 		<div class="section"><span>Education</span></div>
 
@@ -179,11 +164,11 @@
 		</div>
 
 		<div>
-			<b>Backend Frameworks:</b> GraphQL, Starlette, SQLAlchemy ORM, Flask
+			<b>Backend Frameworks:</b> GraphQL, FastAPI, SQLAlchemy ORM, Flask
 		</div>
 
 		<div>
-			<b>Frontend Frameworks:</b> Svelte, Vue, TailwindCSS
+			<b>Frontend Frameworks:</b> Svelte, TailwindCSS, Typescript, Vue
 		</div>
 
 		<div>
@@ -245,3 +230,30 @@
 	</div>
 
 </main>
+
+<style lang="postcss">
+	main {
+		width: 67rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr .8fr;
+		font-family: Inter, sans-serif;
+	}
+
+	@media screen {
+		main {
+			@apply shadow-xl;
+		}
+	}
+
+	.section {
+		@apply flex justify-center;
+	}
+
+	.section span {
+		@apply inline-block bg-teal-600 rounded text-white text-xl font-bold p-2 py-1 mt-2;
+	}
+
+	i {
+		@apply font-bold text-gray-600;
+	}
+</style>

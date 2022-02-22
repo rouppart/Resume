@@ -18,8 +18,8 @@
 {:else}
 <div>
   <div class="flex justify-between space-x-2">
-    <div class="hover:pointer" on:click={switchHide}>
-      <div class="font-bold">{organization}</div>
+    <div>
+      <div class="font-bold cursor-pointer" on:click={switchHide}>{organization}</div>
       {#if position}<div class="font-bold text-gray-500">{position}</div>{/if}
       {#if url}<a href="http://{url}" target="_blank">{url}</a>{/if}
     </div>
